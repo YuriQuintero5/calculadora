@@ -37,37 +37,29 @@
         android:hint="Digite Numero Dos"
         android:inputType="number" />
 
-    <Button
-        android:id="@+id/btnSumar"
-        android:layout_width="match_parent"
+    <LinearLayout
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:onClick="sumar"
-        android:text="Sumar"
-        tools:text="SUMAR" />
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        android:orientation="horizontal">
 
-    <Button
-        android:id="@+id/btnRestar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:onClick="restar"
-        android:text="Restar"
-        tools:text="Restar" />
+        <Button
+            android:id="@+id/btnSumar"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:onClick="sumar"
+            android:text="Sumar"
+            tools:text="SUMAR" />
 
-    <Button
-        android:id="@+id/btnMultiplicar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:onClick="multilicar"
-        android:text="Multiplicar"
-        tools:text="Miltiplicar" />
+        <Button
+            android:id="@+id/btnLimpiar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="limpiar"
+            android:text="Limpiar" />
 
-    <Button
-        android:id="@+id/btnDividir"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:onClick="dividir"
-        android:text="Dividir"
-        tools:text="Dividir" />
+    </LinearLayout>
 
     <TextView
         android:id="@+id/lbResultado"
@@ -81,12 +73,5 @@
         android:textSize="30sp"
         android:textStyle="bold"
         android:typeface="sans" />
-
-    <Button
-        android:id="@+id/btnLimpiar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:onClick="limpiar"
-        android:text="Limpiar" />
 
 </LinearLayout>
