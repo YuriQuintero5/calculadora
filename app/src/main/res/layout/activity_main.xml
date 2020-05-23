@@ -12,8 +12,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:fontFamily="serif"
+        android:gravity="center"
         android:lineSpacingExtra="36sp"
-        android:text="CALCULADORA"
+        android:text="@string/titulo"
         android:textAllCaps="true"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         android:textColor="#D80B0B"
@@ -26,7 +27,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint="Digite numero uno"
+        android:hint="@string/Numero_uno"
         android:inputType="number" />
 
     <EditText
@@ -34,7 +35,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint="Digite Numero Dos"
+        android:hint="@string/Numero_dos"
         android:inputType="number" />
 
     <LinearLayout
@@ -49,7 +50,7 @@
             android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:onClick="sumar"
-            android:text="Sumar"
+            android:text="@string/btnSumar"
             tools:text="SUMAR" />
 
         <Button
@@ -57,7 +58,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="limpiar"
-            android:text="Limpiar" />
+            android:text="@string/btnLimpiar" />
 
     </LinearLayout>
 
