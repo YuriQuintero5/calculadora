@@ -12,6 +12,7 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity {
     private EditText numero_uno, numero_dos;
     private TextView resultado;//NULL
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -21,66 +22,40 @@ public class MainActivity extends AppCompatActivity {
         resultado = findViewById(R.id.lbResultado);
 
     }
-        public void sumar (View v){
-            if (numero_uno.getText().length() > 0 && numero_dos.getText().length() > 0) {
-                int num_uno, num_dos, suma;
-                num_uno = Integer.parseInt(numero_uno.getText().toString());
-                num_dos = Integer.parseInt(numero_dos.getText().toString());
-                suma = num_uno + num_dos;
-                resultado.setText(""+suma);
-            }
-            else {
-                Toast.makeText(MainActivity.this, "Digite todos los campos",
-                        Toast.LENGTH_LONG).show();
-            }
-         }
 
-    public void restar (View v){
-        if (numero_uno.getText().length() > 0 && numero_dos.getText().length() > 0) {
-            int num_uno, num_dos, resta;
+    public void calcular(View v) {
+        int num_uno, num_dos, suma;
+        if(validar()) {
             num_uno = Integer.parseInt(numero_uno.getText().toString());
             num_dos = Integer.parseInt(numero_dos.getText().toString());
-            resta = num_uno - num_dos;
-            resultado.setText(""+resta);
+            suma = num_uno + num_dos;
+            resultado.setText("" + suma);
         }
-        else {
-            Toast.makeText(MainActivity.this, "Digite todos los campos",
-                    Toast.LENGTH_LONG).show();
-        }
+
     }
 
-    public void multilicar (View v){
-        if (numero_uno.getText().length() > 0 && numero_dos.getText().length() > 0) {
-            int num_uno, num_dos, mult;
-            num_uno = Integer.parseInt(numero_uno.getText().toString());
-            num_dos = Integer.parseInt(numero_dos.getText().toString());
-            mult = num_uno * num_dos;
-            resultado.setText(""+mult);
-        }
-        else {
-            Toast.makeText(MainActivity.this, "Digite todos los campos",
-                    Toast.LENGTH_LONG).show();
-        }
-    }
-
-    public void dividir (View v){
-        if (numero_uno.getText().length() > 0 && numero_dos.getText().length() > 0) {
-            int num_uno, num_dos, div;
-            num_uno = Integer.parseInt(numero_uno.getText().toString());
-            num_dos = Integer.parseInt(numero_dos.getText().toString());
-            div = num_uno / num_dos;
-            resultado.setText(""+div);
-        }
-        else {
-            Toast.makeText(MainActivity.this, "Digite todos los campos",
-                    Toast.LENGTH_LONG).show();
-        }
-    }
-
-    public void limpiar(View v){
+    public void limpiar(View v) {
         numero_uno.setText("");
         numero_dos.setText("");
         resultado.setText("");
         numero_uno.requestFocus();
+    }
+
+    public boolean validar() {
+        String error_numero_uno, error_numero_dos;
+        error_numero_uno = getResources().getString(R.string.error_numero_uno);
+        error_numero_dos = getResources().getString(R.string.error_numero_dos);
+        if (numero_uno.getText().toString().isEmpty()) {
+            numero_uno.setError("Digite el numero uno");
+            numero_uno.requestFocus();
+            return false;
+        } else {
+            if (numero_dos.getText().toString().isEmpty()) {
+                numero_dos.setError("Digite el numero dos");
+                numero_dos.requestFocus();
+                return false;
+            }
+            return true;
+        }
     }
 }

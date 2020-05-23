@@ -6,4 +6,6 @@
     <string name="Numero_dos">Number two</string>
     <string name="btnSumar">Add</string>
     <string name="btnLimpiar">Clear</string>
+    <string name="error_numero_uno">Type number one</string>
+    <string name="error_numero_dos">Type number two</string>
 </resources>

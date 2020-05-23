@@ -5,4 +5,6 @@
     <string name="Numero_dos">Numero dos</string>
     <string name="btnSumar">Sumar</string>
     <string name="btnLimpiar">Limpiar</string>
+    <string name="error_numero_uno">Digite numero uno</string>
+    <string name="error_numero_dos">Digite numero dos</string>
 </resources>

@@ -49,7 +49,7 @@
             android:id="@+id/btnSumar"
             android:layout_width="100dp"
             android:layout_height="wrap_content"
-            android:onClick="sumar"
+            android:onClick="calcular"
             android:text="@string/btnSumar"
             tools:text="SUMAR" />
 
