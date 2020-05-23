@@ -11,9 +11,15 @@
         android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Calculadora"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        tools:text="CALCULADORA" />
+        android:fontFamily="serif"
+        android:lineSpacingExtra="36sp"
+        android:text="CALCULADORA"
+        android:textAllCaps="true"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="#D80B0B"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:typeface="sans" />
 
     <EditText
         android:id="@+id/txtNumeroUno"
@@ -35,12 +41,52 @@
         android:id="@+id/btnSumar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="btnSumar"
+        android:onClick="sumar"
+        android:text="Sumar"
         tools:text="SUMAR" />
 
-    <TextView
-        android:id="@+id/lblResultado"
+    <Button
+        android:id="@+id/btnRestar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:onClick="restar"
+        android:text="Restar"
+        tools:text="Restar" />
+
+    <Button
+        android:id="@+id/btnMultiplicar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="multilicar"
+        android:text="Multiplicar"
+        tools:text="Miltiplicar" />
+
+    <Button
+        android:id="@+id/btnDividir"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="dividir"
+        android:text="Dividir"
+        tools:text="Dividir" />
+
+    <TextView
+        android:id="@+id/lbResultado"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:fontFamily="monospace"
+        android:lineSpacingExtra="30sp"
+        android:text="resultado"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:typeface="sans" />
+
+    <Button
+        android:id="@+id/btnLimpiar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="limpiar"
+        android:text="Limpiar" />
 
 </LinearLayout>
